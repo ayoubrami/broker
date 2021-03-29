@@ -1,0 +1,23 @@
+@import './variables/colors.scss';
+@import './fonts/googleFonts.scss';
+
+
+body {
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 1.4;
+}
+body,
+.Montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+button,input,textarea,select{
+    font-family: inherit;
+    text-align: initial;
+}
+a {
+    color : $mint;
+    text-decoration: none;
+}

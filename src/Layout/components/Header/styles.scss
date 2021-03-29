@@ -1,0 +1,22 @@
+.header {
+    height: 80px;
+}
+.nav a {
+    color : #DEDEDE;
+}
+
+.nav a.activeNavItem, 
+.nav a:hover {
+    color : #00203F;
+    background-color : #ADEFD1;
+}
+.butt:hover {
+    color : #fff;
+    background-color: #00203F;
+
+}
+.buttt:hover {
+    border-style: solid;
+    border-color: #00203F;
+    border-width: 3px;
+}
