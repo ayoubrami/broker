@@ -10,7 +10,7 @@ import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client'
 function App({...props}) {
 
   const client = new ApolloClient({
-    uri: 'http://localhost:3030',
+    uri: 'https://api-broker.herokuapp.com/',
     cache: new InMemoryCache()
   });
 
