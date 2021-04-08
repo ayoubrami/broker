@@ -2,7 +2,7 @@ import React from 'react'
 import cx from 'classnames'
 const Card = ({
     property : {
-        city,
+        type,
         foor,
         title,
         price,
@@ -26,7 +26,7 @@ const Card = ({
             <div className='flex flex-column items-start'>
                 <h5 className='fw6 f6 sailor mv0'>{title}</h5>
                 <p className='gray mt2 f6 h1'>
-                    {city} - {foor}
+                    {type} For {foor}
                 </p>
             </div>
             <div className='mt3 flex items-center justify-between'>

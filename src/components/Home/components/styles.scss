@@ -7,9 +7,9 @@
     z-index: -1;
 } 
 .findGradiant{
-    background: rgb(255,255,255);
-background: -moz-linear-gradient(5deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(173,239,209,1) 100%);
-background: -webkit-linear-gradient(5deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(173,239,209,1) 100%);
-background: linear-gradient(5deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(173,239,209,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#adefd1",GradientType=1);
+    background: rgb(173,239,209);
+    background: -moz-linear-gradient(277deg, rgba(173,239,209,1) 0%, rgba(255,255,255,1) 80%);
+    background: -webkit-linear-gradient(277deg, rgba(173,239,209,1) 0%, rgba(255,255,255,1) 80%);
+    background: linear-gradient(277deg, rgba(173,239,209,1) 0%, rgba(255,255,255,1) 80%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#adefd1",endColorstr="#ffffff",GradientType=1);
 }

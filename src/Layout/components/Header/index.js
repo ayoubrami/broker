@@ -2,9 +2,10 @@ import React from 'react';
 import { Container } from '..';
 import { Link } from 'react-router-dom';
 import logo from '../../../static/images/Broker.svg';
+import './styles.scss'
 const Header= () =>(
    <Container>
-       <div className='flex items-center justify-between mt3'>
+       <div className='flex items-center justify-between mt3 mb3'>
             <Link to='/' className=''>
                 <img src={logo} alt='logo' width='' height=''/>
             </Link>
