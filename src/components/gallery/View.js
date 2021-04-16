@@ -7,7 +7,7 @@ import './grid.scss'
 
 
 const MyGallery = ({ property:{ id, title, type, foor } }) => {
-    const {loading, error, data}=useQuery(gallery,{
+    const {loading, data}=useQuery(gallery,{
         variables:{
             id
         }
@@ -18,9 +18,8 @@ const MyGallery = ({ property:{ id, title, type, foor } }) => {
     let IMAGES=[];
 
     if(!loading && data){
-        Object.keys(data.Gallery[0]).map((key,i)=>{
+        Object.keys(data.Gallery[0]).forEach((key)=>{
             if(data.Gallery[0][key] !== null && data.Gallery[0][key] !== 'Gallery'){
-                
                 IMAGES.push({
                     key,
                     photo:data.Gallery[0][key]

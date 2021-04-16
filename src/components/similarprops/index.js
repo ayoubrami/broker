@@ -5,7 +5,7 @@ import Carousel from '../carousel'
 import Container from '../../Layout/components/Container'
 
 const SimilarProps = ({ property:{ id, city, type, foor } }) => {
-    const {loading, error, data} = useQuery(similarProps, {
+    const {loading, data} = useQuery(similarProps, {
         variables:{
             id,
             city,
