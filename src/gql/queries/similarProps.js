@@ -1,9 +1,8 @@
 import { gql } from '@apollo/client'
 
 export default gql`
-    query{
-        FeaturedProps(isfeatured: true){
-            id
+    query ($city: String!, $type: String!, $foor: String!, $id:ID!){
+        SimilarProps(city: $city, type: $type, foor: $foor, id: $id){
             title
             city
             type

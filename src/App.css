@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
 @media (prefers-reduced-motion: no-preference) {
