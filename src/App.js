@@ -13,7 +13,7 @@ import 'react-image-lightbox/style.css';
 function App({...props}) {
 
   const client = new ApolloClient({
-    uri: process.env.API_URL || 'http://localhost:3030',
+    uri: process.env.REACT_APP_API_URL || 'http://localhost:3030',
     cache: new InMemoryCache()
   });
 
