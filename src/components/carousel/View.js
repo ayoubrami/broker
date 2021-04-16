@@ -41,7 +41,7 @@ const View = ({
                     infinite={false}
                     
                     items={properties.map(property=>
-                        <Link key={property.id} to='#'>
+                        <Link key={property.id} to={`property/${property.id}`}>
                             <Card property={property} className='ma3 shadow-2'/>
                         </Link>      
                     )}

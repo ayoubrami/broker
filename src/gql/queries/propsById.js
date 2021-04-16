@@ -1,15 +1,17 @@
 import { gql } from '@apollo/client'
 
 export default gql`
-query ($city: String) {
-        Props (city: $city) {
+query ($id: ID!) {
+        PropsById (id: $id) {
                 id
                 title
                 city
                 type
                 foor
                 price
-                main_photo
+                address
+                description
+                specs
         }
 }
 `;

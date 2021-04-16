@@ -8,7 +8,7 @@ const View = () => {
     const { loading, data} = useQuery(featuredProps);
  
     return (  
-    <Container className=''>
+    <Container>
         <div className='flex justify-start'>
             <h2 className=''>Featured Properties</h2>
         </div>
