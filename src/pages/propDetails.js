@@ -7,7 +7,7 @@ import Description from '../components/description'
 import SimilarProps from '../components/similarprops'
 const PropDetails = () => {
     let { id } = useParams();
-    const {loading, error, data}=useQuery(propsById,{
+    const {loading, data}=useQuery(propsById,{
         variables:{
             id
         }
