@@ -27,11 +27,8 @@ const MyGallery = ({ property:{ id, title, type, foor } }) => {
             }  
         })
     }
-   
-    
     return (
-       
-            <Container className='gradiant pb5'>
+            <Container className='gradiant pb3'>
                 <div className='flex flex-column items-start mb2'>
                     <h1 className='mb0'>{title}</h1>
                     <p>{`${type} For ${foor}`}</p>

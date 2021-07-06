@@ -1,13 +1,13 @@
 import './App.css';
 import { Home } from './components/Home'
 import {Layout} from './Layout'
+import { BrowserRouter, Route, Switch} from 'react-router-dom'
+import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client'
 import SignIn from './pages/signIn'
 import Register from './pages/register'
 import BrowseAll from './pages/browseAll'
-import { BrowserRouter, Route, Switch} from 'react-router-dom'
-import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client'
-import PropDetails from './pages/propDetails';
-import 'react-image-lightbox/style.css';
+import PropDetails from './pages/propDetails'
+import 'react-image-lightbox/style.css'
 
 
 function App({...props}) {

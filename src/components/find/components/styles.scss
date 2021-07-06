@@ -1,0 +1,9 @@
+.anime{
+    transition: all .5s ease;
+    
+}
+.anime:hover button {
+    height: 200px;
+  opacity: 1;
+  transform: translateY(0);
+}

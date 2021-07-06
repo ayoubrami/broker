@@ -1,25 +1,31 @@
 import View from './View'
-import {compose, withState, withHandlers} from 'recompose'
-
+import {compose, withHandlers, withStateHandlers} from 'recompose'
 const enhance = compose(
-    withState('foor','setFoor',''),
-    withState('type','setType',''),
-    withState('city','setCity',''),
-    withState('price','setPrice',''),
+    withStateHandlers(
+        ()=>({
+            Filters:{
+                foor: null,
+                type: null,
+                price: null,
+                city: null
+            }
+        }),
+        {
+            setFilters : ({Filters: prevFilters}) => Filters => ({
+                Filters:{
+                    ...prevFilters,
+                    ...Filters
+                }
+            })
+        }
+    ),
 
     withHandlers({
-        handleFoor: ({setFoor}) => (event) => {
-            setFoor(event.target.value)
+        handleFilters : ({setFilters}) => filters => {
+            setFilters({
+                ...filters
+            })
         },
-        handleType: ({setType}) => (event) => {
-            setType(event.target.value)
-        },
-        handleCity: ({setCity}) => (event) => {
-            setCity(event.target.value)
-        },
-        handlePrice: ({setPrice}) => (event) => {
-            setPrice(event.target.value)
-        }
     }),
 
 )
