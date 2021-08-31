@@ -5,7 +5,7 @@ import availableCities from '../../gql/queries/availableCitites'
 import Select from './components/select'
 import Container from '../../Layout/components/Container'
 import cx from 'classnames'
-const View = ({handleFilters, Filters, callback}) => {
+const View = ({handleFilters, Filters, callback,isLocated}) => {
     const { loading, data } = useQuery(availableCities)
 
     const foor = ['Buy','Rent']
@@ -13,11 +13,16 @@ const View = ({handleFilters, Filters, callback}) => {
     const price = ['500-1500 MAD','1500-3000 MAD','3000-and above']
     
     callback(Filters)
-
     return (
-        <Container>
-            <form onSubmit={e => e.preventDefault()} className='br-pill ba b--sailor bw1 ma3 pa3 shadow-1 flex flex-wrap justify-between items-center'>
-                <Downshift onChange={selected => handleFilters({city: selected})}>
+        <Container className=''>
+            <form onSubmit={e => {
+                    e.preventDefault()
+                    if(isLocated)
+                        handleFilters({city:isLocated})
+                    }} 
+                className='br-pill ba b--sailor bw1 ma3 pa3 shadow-1 flex flex-wrap justify-between items-center'
+            >
+                {!isLocated && (<Downshift onChange={selected => handleFilters({city: selected})}>
                     {({
                         getInputProps,
                         getItemProps,
@@ -56,6 +61,7 @@ const View = ({handleFilters, Filters, callback}) => {
                             </div>)
                             )}
                 </Downshift>
+                )}
                     <Select title={'For'} items={foor} onChange={selected => handleFilters({foor: selected})} />
                     <Select title={'Type'} items={type} onChange={selected => handleFilters({type: selected})}/>
                     <Select title={'Price'} items={price} onChange={selected => handleFilters({price: selected})}/>

@@ -12,18 +12,20 @@ const View = () => {
         return (
                 <>
                         <Intro/>
-                        <Find callback={callback}/> 
+                        <Find callback={callback}/>
                         <Featured/>
                         {filters && filters.city && (
                                 <Search filters={filters}/>
                         )}
-                        <Link to='/allproperties'>
-                                <button 
-                                        className='ba b--sailor bg-white f4 fw6 br-pill bw1 ph4 pv3 butt shadow-2 mb5 mt5 pointer grow'
-                                >
-                                        Browse all properties
-                                </button>
-                        </Link>
+                        <div>
+                                <Link to='/allproperties'>
+                                        <button 
+                                                className='ba b--sailor bg-white f4 fw6 br-pill bw1 ph4 pv3 butt shadow-2 mb5 mt5 pointer grow'
+                                        >
+                                                Browse all properties
+                                        </button>
+                                </Link>
+                        </div>
                         
                 </>
         )

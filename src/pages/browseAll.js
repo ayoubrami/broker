@@ -18,14 +18,14 @@ const BrowseAll = () => {
     <div>
         <Find callback={callback}/>
         { filters && !filters.city && (
-        <Container className=''>
+        <Container>
             {!loading && data && ( 
                 data.Cities.map(({city},i) => 
                     (
-                    <div className='' key={i}>
+                    <div key={i}>
                         <div className='flex justify-between items-center'>
                             <h2 className=''>{city}</h2>
-                            <Link to ={`/${city}`} className='underline sailor'>See more</Link>
+                            <Link to ={`properties/${city}`} className='underline sailor'>See more</Link>
                         </div>
                         <PropsByCity city={city}/>
                     </div>

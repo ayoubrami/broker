@@ -13,7 +13,7 @@ const PropDetails = () => {
         }
     })
     return (
-        <div>
+        <>
             {!loading && data && (
                 <>
                     <MyGallery property={data.PropsById[0]}/>
@@ -21,7 +21,7 @@ const PropDetails = () => {
                     <SimilarProps property={data.PropsById[0]}/>
                 </>
             )}
-        </div>
+        </>
     )
 }
 
