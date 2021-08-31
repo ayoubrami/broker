@@ -19,7 +19,7 @@ import jwtDecode from 'jwt-decode';
 function App({...props}) {
   
   const link = createHttpLink({
-    uri: process.env.BROKER_API || 'http://localhost:3030/graphql',
+    uri: process.env.REACT_APP_API_URL || 'http://localhost:3030/graphql',
     credentials: 'include',
     // fetchOptions: {
     //   credentials: 'include'
