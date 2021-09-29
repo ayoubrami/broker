@@ -2,45 +2,45 @@ import React, { useEffect, useState } from 'react'
 import { Formik, Field, Form } from 'formik';
 import Container from '../../Layout/components/Container';
 import Select from '../find/components/select'
-import Specs from '../specs';
+//import Specs from '../specs';
 const PropForm = () => {
-    const specs = [
-        {
-            id: 1,
-            name: 'BedRoom',
-            isSelected: false
-        },
-        {
-            id: 2,
-            name: 'LivingRoom',
-            isSelected: false
-        },
-        {
-            id: 3,
-            name: 'Kitchen',
-            isSelected: false
-        },
-        {
-            id: 4,
-            name: 'Toilet',
-            isSelected: false
-        },
-        {
-            id: 5,
-            name: 'BathRoom',
-            isSelected: false
-        },
-        {
-            id: 6,
-            name: 'Garage',
-            isSelected: false
-        },
-        {
-            id: 6,
-            name: 'Floors',
-            isSelected: false
-        },
-    ]
+    // const specs = [
+    //     {
+    //         id: 1,
+    //         name: 'BedRoom',
+    //         isSelected: false
+    //     },
+    //     {
+    //         id: 2,
+    //         name: 'LivingRoom',
+    //         isSelected: false
+    //     },
+    //     {
+    //         id: 3,
+    //         name: 'Kitchen',
+    //         isSelected: false
+    //     },
+    //     {
+    //         id: 4,
+    //         name: 'Toilet',
+    //         isSelected: false
+    //     },
+    //     {
+    //         id: 5,
+    //         name: 'BathRoom',
+    //         isSelected: false
+    //     },
+    //     {
+    //         id: 6,
+    //         name: 'Garage',
+    //         isSelected: false
+    //     },
+    //     {
+    //         id: 6,
+    //         name: 'Floors',
+    //         isSelected: false
+    //     },
+    // ]
     const [cities, setCities] = useState([]);
     useEffect(()=>{
         async function fetchData(){
