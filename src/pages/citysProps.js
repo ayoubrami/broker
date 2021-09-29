@@ -18,14 +18,14 @@ const CitysProps = () => {
         setFilters(data)
     }
     return (
-        <Container className=''>
+        <Container>
             <Find callback={callback} isLocated={city}/>
             <h1 className='ma5'> { city } </h1>
             { filters && !(filters.foor || filters.type) && !loading && data && (
                 <Grid properties={data.Props}/>
             )}
             {filters && (filters.foor || filters.type) && (
-                <Search filters={filters} isLocated/>
+                <Search filters={filters} isLocated={city} />
             )
             }
         </Container>

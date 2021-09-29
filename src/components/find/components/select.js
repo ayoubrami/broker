@@ -15,8 +15,8 @@ const Select = ({title,items,className,onChange}) => {
     }
     
     return (
-    <div className={cx('f3 br-pill shadow-1',className)}>
-        <button className='b--none bg-transparent flex items-center justify-between ph4 pv2 pointer' onClick={toggle}>
+    <div className='f3 br-pill shadow-1 mv0-ns mb3'>
+        <button className='b--none bg-transparent flex items-center justify-between ph4 pv2 pointer' onClick={toggle} type='button'>
             <div className='flex-auto'>
                 {isOpen ? (
                     <span>{title}</span>
@@ -30,12 +30,13 @@ const Select = ({title,items,className,onChange}) => {
             <img src="/images/arrow_down.svg" alt="" className={cx('',{"rotate-180": isOpen})}/>
         </button>
         {isOpen && (
-                <div className='mt2 flex flex-column items-center absolute z-0 br4 shadow-1 bg-white'>
+                <div className={cx('mt2 flex flex-column items-center absolute z-0 br4 shadow-1 bg-white',className)}>
                     {items.map((item,i) => (
                         <button 
                             className={cx('b--none mv1 ph4 br-pill bg-transparent butt w-100 tc f4 pointer',{'bg-sailor white': selected===item})} 
                             onClick={onOptionClicked(item)} 
                             key={i}
+                            type='button'
                         >
                             {item}
                         </button>

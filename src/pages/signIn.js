@@ -8,7 +8,7 @@ const SignIn = () =>{
     const { loading, data } = useQuery(Me)
     return (
         <>
-            { !loading && data.Me ? <Redirect to='/'/> : <AuthCard/> }
+            { !loading && data && data.Me ? <Redirect to='/'/> : <AuthCard/> }
         </>
 )}
 

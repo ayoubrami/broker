@@ -51,11 +51,10 @@ const Profile = ({user: { id, name, email, avatar, phone_number }}) => {
     });
     const [changePassword] = useMutation(updatePassword,{
         onError: (ApolloError) => {
+            setServerError(ApolloError.message)
             toast.error(ApolloError.message,{
                 position: 'top-center'
             })
-            setServerError(ApolloError.message)
-            console.log(ApolloError)
         }
     });
     const [drop] = useMutation(deleteProfile);
@@ -108,18 +107,18 @@ const Profile = ({user: { id, name, email, avatar, phone_number }}) => {
                 }}
             >
                 {({errors, touched})=>(
-                    <Form className=' '>
+                    <Form>
                         <div className='flex flex-column items-center '>
                             <input type='file' name ='avatar' ref={inputFile} style={{display: 'none'}} onChange= {(e)=> {
                                 setImage(e.target.files[0]);
                             }}/>
-                            <img src={url || 'images/profile.png'} width='275' height='275' alt='' className='br-pill ba b--white dim bw3 pointer' onClick={(e)=>{
+                            <img src={url || 'images/profile.png'} width='275' height='275' alt='' className='br-pill ba b--white dim bw1 pointer shadow-3' onClick={(e)=>{
                                 e.preventDefault();
                                 onImageClick();
                             }}/>
                             <Field className='mt3 f3 tc b--none' name='fullName' />
                         </div>
-                        <div className='br2 shadow-1 pa4 ma3 flex flex-column w-50 center'>
+                        <div className='br2 shadow-1 pa4 ma3 flex flex-column w-50-ns center'>
                             <div className="mt4 ">
                                 <label className="db fw6 f6 mb2">Phone Number</label>
                                 <Field className="pa2 ph3 input-reset b--none br3 bg-transparent shadow-1" name="phoneNumber" placeholder='Enter your phone number'/>
@@ -161,9 +160,9 @@ const Profile = ({user: { id, name, email, avatar, phone_number }}) => {
                     </Form>
                 )}
             </Formik>
-            <div className=' w-50 center flex justify-end mb3 '>
+            <div className=' w-50-ns center flex justify-end mb3 '>
                 <button 
-                    className='bg-red b--red br-pill white pv2 ph3 mt3 pointer dim shadow-1' 
+                    className='bg-red b--red br-pill white f6 pa2 mt3 pointer dim shadow-1' 
                     onClick={async () => {
                         if(window.confirm("are you sure about deleting your account ? this can't be undone")){
                             drop({

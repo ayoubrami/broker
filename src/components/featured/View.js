@@ -8,9 +8,7 @@ const View = () => {
  
     return (  
     <Container>
-        <div className='flex justify-start'>
-            <h2 className=''>Featured Properties</h2>
-        </div>
+        <h2 className='tl sailor'>Featured Properties</h2>
         { !loading && data && ( <Carousel properties={data.FeaturedProps}/> ) }        
     </Container>
     

@@ -8,7 +8,7 @@ const Register = () =>{
     const { loading, data } = useQuery(Me)
     return (
         <>
-            { !loading && data.Me ? <Redirect to='/'/> :  <AuthCard isSignup/> }
+            { !loading && data && data.Me ? <Redirect to='/'/> :  <AuthCard isSignup/> }
         </>
 )}
 

@@ -7,7 +7,7 @@ import Grid from '../grid'
 const Search = ({filters: {city, foor, type, price}, isLocated}) =>{
     const { loading, data } = useQuery(filtredProps,{
         variables:{
-            city,
+            city: city || isLocated,
             foor,
             type,
         }
@@ -16,13 +16,11 @@ const Search = ({filters: {city, foor, type, price}, isLocated}) =>{
         !loading && data && (
             <Container className='mt4'>
                 { !isLocated && 
-                (   <div className='flex justify-start'>
-                        <h2 className=''>{ city }</h2>
-                    </div>
-                )}
+                    ( <h2 className='tl'>{ city }</h2> )
+                }
                 { data.FiltredProps.length > 0 ? 
                     <Grid properties={data.FiltredProps}/> : 
-                    <p> Sorry, there's no {type ? type : 'property'} in {city} for {foor} <br/> Please check back later ... </p>
+                    <p> Sorry, there's no {type ? type : 'property'} in {city} for {foor} <br/> Please check back later 🙂 </p>
                 }
             </Container>
             )
