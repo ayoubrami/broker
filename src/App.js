@@ -1,6 +1,6 @@
 import './App.css';
 import { Home } from './components/Home'
-import {Layout} from './Layout'
+import { Layout } from './Layout'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink, ApolloLink } from '@apollo/client'
 import { setContext } from '@apollo/client/link/context'
