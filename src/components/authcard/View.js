@@ -57,7 +57,7 @@ const View = ({isSignup}) => {
             </>
             ) : <h1 className='sailor mt4'>Welcome back!</h1>
         }
-        <div className="br3 ba b--black-10 ma4 flex justify-center w-25-ns center-ns shadow-5">
+        <div className="br3 ba b--black-10 ma4 flex justify-center w-40-ns center-ns shadow-5">
             <main className="w-75-ns w-100 pa3 ma3 bb bt br4 b--black-20">
                     <Formik
                         initialValues={{ email: '', fullname:'', password: '', confirmPassword:'' }}
