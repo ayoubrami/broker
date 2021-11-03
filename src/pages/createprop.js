@@ -1,13 +1,17 @@
 import React from 'react'
 import PropForm from '../components/propform'
+import { useQuery } from '@apollo/client'
+import { Redirect } from 'react-router-dom'
+import Me from '../gql/queries/me'
 
 const CreateProp = () => {
-    //         specs
-    //         mainphoto
-    
+    const { loading, data } = useQuery(Me);
     return (
         <div className=''>
-            <PropForm/>            
+            { !loading && data.Me && ( 
+                <PropForm/> 
+            )}
+            {!loading && data.Me == null && <Redirect to='/'/>}
         </div>
         
 )}

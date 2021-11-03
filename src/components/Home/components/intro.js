@@ -1,5 +1,4 @@
 import React from 'react'
-import house from '../../../static/images/house.svg'
 import { motion } from 'framer-motion'
 import './styles.scss'
 import { Link } from 'react-router-dom'
@@ -23,12 +22,12 @@ const Intro = () => {
     return (
       <div className="introGradiant">
         <div className="shape-divider">
-          <div className='flex'>
-            <motion.img src={house} className='w-40 db-ns dn self-center ' width='500' height='450' initial='hidden' animate='visible' variants={variants}/>
-            <div className='flex flex-column self-center content-around w-60-ns ma4 '>
-              <h1 className='pt3 lh-title fw6 f-5-ns sailor tl color-underline '>Looking for a house, apartement ?</h1>
-              <motion.h2 className='pt3 fw5 f-5-ns sailor tl' variants={variants} whileHover='hover' initial='hidden' animate='visible'>We got you . . .</motion.h2>
-              <motion.h2 className='pt3 fw5 f-5-ns sailor tl' variants={variants} whileHover='hover' initial='hidden' animate='visible'>Find your new home now</motion.h2>
+          <div className='flex '>
+            <motion.img src='images/house.svg' className='w-40 db-ns dn self-center ' width='500' height='450' initial='hidden' animate='visible' variants={variants}/>
+            <div className='flex flex-column self-center content-around w-60-ns ma4  '>
+              <h1 className='pt3 lh-title fw6 f2-ns sailor tl color-underline '>Looking for a house, apartement ?</h1>
+              <motion.h2 className='pt3 fw5 f2-ns sailor tl' variants={variants} whileHover='hover' initial='hidden' animate='visible'>We got you . . .</motion.h2>
+              <motion.h2 className='pt3 fw5 f2-ns sailor tl' variants={variants} whileHover='hover' initial='hidden' animate='visible'>Find your new home now</motion.h2>
               <Link to='/allproperties' className='self-end'>
                 <button className='ba b--sailor bg-mint f4 fw6 br-pill bw1 pa3 tc butt shadow-2 mt3 mr5 pointer grow '>
                   Discover properties

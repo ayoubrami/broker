@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Formik, Field, Form } from 'formik';
 import Container from '../../Layout/components/Container';
 import Select from '../find/components/select'
-//import Specs from '../specs';
+import ImageUpload from '../imageupload';
 const PropForm = () => {
     // const specs = [
     //     {
@@ -41,7 +41,7 @@ const PropForm = () => {
     //         isSelected: false
     //     },
     // ]
-    const [cities, setCities] = useState([]);
+    const [cities, setCities] = useState([]); 
     useEffect(()=>{
         async function fetchData(){
             fetch('https://countriesnow.space/api/v0.1/countries/cities',{
@@ -84,7 +84,7 @@ const PropForm = () => {
                             </div>
                             <div className="mt4 tl">
                                 <label className="db f9 mb2 sailor">Price</label>
-                                <Field className="pa2-ns pv2 w-60-ns input-reset b--none br4 bg-transparent shadow-1" name="price" type='number' placeholder='Property price (in MAD)'/>
+                                <Field className="pa2-ns pv2 w-60-ns input-reset b--none br4 bg-transparent shadow-1" name="price" type='number' placeholder='Property price(in MAD)'/>
                                 {errors.price && touched.price && (<div className='red mt1'>{errors.price}</div>)}
                             </div>
                             <div className="mt4 tl">
@@ -92,8 +92,18 @@ const PropForm = () => {
                                 <Field className="pa3 w-100 input-reset b--none br4 bg-transparent shadow-1 h3" name="description" as='textarea'  placeholder='Please describe your property' />
                                 {errors.description && touched.description && (<div className='red mt1'>{errors.description}</div>)}
                             </div>
-                            {/* <Specs/> */}
+                            <div className='mt4 bt bb b--black-20 bw1 br3 pa2 flex justify-between'>
+                                <Select title='Specs' items={['op1','op2']}/>
+                                <input className='input-reset'/>
+                            </div> 
                         </div>
+                        <h2 className='center sailor pt3'>Proprety Images</h2>
+                        <div className='br3 bw1 pa5-ns pa3 ma3 flex flex-column w-60-ns center ba b--mint shadow-4'>
+                            <ImageUpload/>
+                        </div>
+                        <button className='ba bg-white br-pill b--sailor fw6 ma2 mb4 pv2 f4 pointer shadow-5 butt w-60-ns tc' type='submit'>
+                            SUBMIT
+                        </button>
                     </Form>
                 )}
             </Formik>
