@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Formik, Field, Form } from 'formik';
 import Container from '../../Layout/components/Container';
 import Select from '../find/components/select'
-import Specs from '../specs';
+import ImageUpload from '../imageupload';
 const PropForm = () => {
     // const specs = [
     //     {
@@ -97,6 +97,13 @@ const PropForm = () => {
                                 <input className='input-reset'/>
                             </div> 
                         </div>
+                        <h2 className='center sailor pt3'>Proprety Images</h2>
+                        <div className='br3 bw1 pa5-ns pa3 ma3 flex flex-column w-60-ns center ba b--mint shadow-4'>
+                            <ImageUpload/>
+                        </div>
+                        <button className='ba bg-white br-pill b--sailor fw6 ma2 mb4 pv2 f4 pointer shadow-5 butt w-60-ns tc' type='submit'>
+                            SUBMIT
+                        </button>
                     </Form>
                 )}
             </Formik>
