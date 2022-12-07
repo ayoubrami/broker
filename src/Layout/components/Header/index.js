@@ -1,7 +1,7 @@
 import React,{ useState } from 'react';
 import { Container } from '..';
 import { Link } from 'react-router-dom';
-import logo from '../../../static/images/Broker.svg';
+import logo from '../../../assets/Broker.svg';
 import cx from 'classnames'
 import './styles.scss'
 import { useMutation, useQuery } from '@apollo/client';

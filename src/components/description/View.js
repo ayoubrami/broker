@@ -16,7 +16,7 @@ const Description = ({
                         {
                             Object.keys(specs).map(key=>(
                                 <div key={key} className='br-pill bg-light-gray flex items-center ph3 mb3'>
-                                    <img src={`https://res.cloudinary.com/ayoubrami/image/upload/v1618334650/${key}.svg`} width='25px' height='25px' alt=''/>
+                                    <img src={`https://res.cloudinary.com/ayoubrami/image/upload/v1618334650/icons/${key}.svg`} width='25' height='25' alt=''/>
                                     <p className='mh2 fw5'>{key} : {specs[key]}</p>
                                 </div>
                             ))
@@ -29,12 +29,12 @@ const Description = ({
                     </div>
                     <div className='bb b--light-gray mt3'/>
                     <div className='flex items-center mt3'>
-                        <img src={`https://res.cloudinary.com/ayoubrami/image/upload/v1618334650/Location.svg`} width='30px' height='30px' alt=''/>
+                        <img src={`https://res.cloudinary.com/ayoubrami/image/upload/v1618334650/icons/Location.svg`} width='30' height='30' alt=''/>
                         <p className='ml3 fw7'>{address}</p>
                     </div>
                     <div className='bb b--light-gray mt3'/>
                     <div className='flex items-center mt3'>
-                        <img src={`https://res.cloudinary.com/ayoubrami/image/upload/v1618334650/price-tag.svg`} width='30px' height='30px' alt=''/>
+                        <img src={`https://res.cloudinary.com/ayoubrami/image/upload/v1618334650/icons/price-tag.svg`} width='30' height='30' alt=''/>
                         <p className='ml3 fw7'>{price} MAD</p>
                     </div>
                 </div>

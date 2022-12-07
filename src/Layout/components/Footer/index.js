@@ -12,10 +12,10 @@ const Footer = () =>(
                     <p className='ml2'>contact@broker.ma</p>
                 </div>
                 <Link to='https://www.facebook.com/' className='mr3'>
-                    <img src='images/facebook.svg' className='grow' wdith='30px' height='25px' alt=''/>
+                    <img src='images/facebook.svg' className='grow' wdith='30' height='25' alt=''/>
                 </Link>
                 <Link to='https://www.instagram.com/' className='ml2'>
-                    <img src='images/instagram.svg' className='grow' wdith='30px' height='25px' alt=''/>
+                    <img src='images/instagram.svg' className='grow' wdith='30' height='25' alt=''/>
                 </Link>
             </div>
             <div className='tl mt3'>

@@ -9,7 +9,7 @@ const CreateProp = () => {
     return (
         <div className=''>
             { !loading && data.Me && ( 
-                <PropForm/> 
+                <PropForm owner={data.Me[0].id}/> 
             )}
             {!loading && data.Me == null && <Redirect to='/'/>}
         </div>

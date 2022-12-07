@@ -65,16 +65,17 @@ const Profile = ({user: { id, name, email, avatar, phone_number }}) => {
         data.append("file", image)
         data.append("upload_preset", "coolbeans")
         data.append("cloud_name","ayoubrami")
-        fetch("https://api.cloudinary.com/v1_1/ayoubrami/image/upload",{
-            method:"POST",
-            body: data
-        })
-        .then(res => res.json())
-        .then(data => {
-            if(!data.error)
-                setUrl(data.url)
-        })
-        .catch(err => console.log(err))
+ 
+            fetch("https://api.cloudinary.com/v1_1/ayoubrami/image/upload",{
+                method:"POST",
+                body: data
+            })
+            .then(res => res.json())
+            .then(data => {
+                if(!data.error)
+                    setUrl(data.url)
+            })
+            .catch(err => console.log(err))
     },[image]) 
 
     const onImageClick = () => {
@@ -84,7 +85,7 @@ const Profile = ({user: { id, name, email, avatar, phone_number }}) => {
         <Container className='mt3'>    
             <ToastContainer/>
             <Formik
-                initialValues={{fullName: name, email: email, phoneNumber: phone_number, oldPassword:'', newPassword:'', confirmPassword:'' }}
+                initialValues={{fullName: name, email: email, phoneNumber: phone_number || '', oldPassword:'', newPassword:'', confirmPassword:'' }}
                 validationSchema={isOpen ? passwordValidationSchema : validationSchema}
                 onSubmit={({email, phoneNumber, fullName, oldPassword, newPassword})=>{
                     if(newPassword && isOpen)
