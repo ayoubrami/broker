@@ -52,7 +52,7 @@ function App({...props}) {
           }
         },
         fetchAccessToken: async () => {
-          return await fetch(process.env.REFRESH_TOKEN || 'http://localhost:3030/refresh_token',{
+          return await fetch(process.env.REACT_REFRESH_TOKEN || 'http://localhost:3030/refresh_token',{
             method: 'POST',
             credentials: 'include'
           });
